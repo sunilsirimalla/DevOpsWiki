@@ -1,0 +1,17 @@
+IE-Config-server setup - https://github.optum.com/OTCS-IE-DevOps/ie-config-server/blob/master/README.md
+
+Two config server are setup for non-prod environments. a. Demo Config server b. Dev Config server
+
+Demo Config server is used for only demo environment, rest of non-prod environments use Dev config server
+
+Demo config server URL: http://ie-config-server-ie-dev.ocp-ctc-dmz-nonprod.optum.com Dev config server URL : http://ie-config-server-ie-demo.ocp-ctc-dmz-nonprod.optum.com
+
+Demo config server URL parameter value is set in oseConfig.json.
+
+Example: https://github.optum.com/IntegratedEligibility/ie-domain-service/blob/master/oseConfig.json#L211
+
+Config serve url is also used in resouces bootstrap.yml file.
+
+Example: https://github.optum.com/IntegratedEligibility/ie-domain-service/blob/master/src/main/resources/bootstrap.yml#L4
+
+Note: Some services are using hard coded value for config server url in Bootstrap.yml. most of them are updated but few of them may be missed.
